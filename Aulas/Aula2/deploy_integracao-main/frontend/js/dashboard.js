@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://deploy-backend-teste.onrender.com/api";
+const API_BASE_URL = "https://deploy_backend.onrender.com/api";
 
 
 async function fetchTasks() {
