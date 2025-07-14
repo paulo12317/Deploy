@@ -18,7 +18,7 @@ registerForm.addEventListener("submit", async (e) => {
 
         if (res.ok) {
             alert("Usuário criado com sucesso! Faça login.");
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         } else {
             const data = await res.json();
             alert(data.message || "Erro ao registrar");
