@@ -15,7 +15,7 @@ router.get("/tasks/user", AuthMiddleware, taskController.getTasksByUser);
 router.get("/tasks/:id", AuthMiddleware, taskController.getTaskById);
 
 // Rota para atualizar o status de uma tarefa
-router.put("/tasks/:id", AuthMiddleware, taskController.updateTask);
+router.patch("/tasks/:id", AuthMiddleware, taskController.updateTask);
 
 // Rota para deletar uma tarefa
 router.delete("/tasks/:id", AuthMiddleware, taskController.deleteTask);

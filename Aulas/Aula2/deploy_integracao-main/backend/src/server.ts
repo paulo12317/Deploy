@@ -14,6 +14,8 @@ app.use(express.urlencoded({ extended: true })); // Configura o Express para int
 
 // Habilita CORS para permitir requisições de outros domínios
 app.use(cors({
+    origin: "https://deploy-integracao.vercel.app", // Permite requisições do domínio especificado
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Permite os métodos HTTP especificados
     credentials: true, // Permite credenciais (cookies, headers de autenticação, etc.)
 }));
 
