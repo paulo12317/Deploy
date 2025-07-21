@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Biblioteca de Livros</h2>
+
+      <section>
+        <h3>Cadastrar / Editar Livro</h3>
+        <form id="createForm">
+          <input type="hidden" name="id" id="hiddenId" />
+
+          <label for="name">Nome:</label>
+          <input type="text" name="name" required />
+
+          <label for="tipo">Tipo:</label>
+          <input type="text" name="tipo" required />
+
+          <label for="ano">Ano:</label>
+          <input type="number" name="ano" required />
+
+          <button type="submit">Salvar</button>
+          <button type="button" id="cancelarEdicao" style="display: none">
+            Cancelar
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h3>Lista de Livros</h3>
+        <div class="tabela-wrapper">
+          <table id="tabelaLivros" class="tabela-livros">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Ano</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <a class="btn-backlogin" href="cadastrar.html"><button>Sair</button></a>
+      </section>
+
+      <div id="mensagemSucesso" class="mensagem"></div>
+    </div>
+
+    <audio id="somBiblioteca" muted autoplay loop>
+      <source src="./music/biblioteca.mp4" type="audio/mpeg" />
+    </audio>
+    <script src="./js/livros.js" type="module"></script>
+    <img
+      src="./img/cafe.png"
+      alt="café no canto"
+      class="footer-corner-img"
+    />
+  </body>
+</html>

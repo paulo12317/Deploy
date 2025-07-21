@@ -1,0 +1,240 @@
+:root {
+  --fundo-principal: #f7f2ec;
+  --marrom-claro: #a97b50;
+  --marrom-escuro: #5c3a21;
+  --dourado-claro: #d9b28c;
+  --texto: #2e1c0b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: var(--texto);
+  background-image: url('../img/biblioteca.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--marrom-escuro);
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: var(--marrom-escuro);
+  font-family: 'Times New Roman', serif;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--marrom-escuro);
+  font-family: 'Times New Roman', serif;
+  margin-bottom: 20px;
+  font-size: 45px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid var(--marrom-claro);
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 1rem;
+  background-color: #fffaf5;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: var(--marrom-escuro);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--marrom-claro);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+.editar {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--marrom-claro);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+.excluir {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--marrom-claro);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: var(--marrom-escuro);
+}
+
+.footer-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-text a {
+  color: var(--marrom-escuro);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer-corner-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.mensagem {
+  background-color: #ede4db;
+  padding: 20px;
+  border-left: 5px solid var(--marrom-escuro);
+  border-radius: 10px;
+  margin-top: 20px;
+  display: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabela-livros {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.tabela-livros th,
+.tabela-livros td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+.tabela-livros thead {
+  background-color: #8a5836;
+  color: white;
+}
+
+.tabela-livros tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabela-livros tbody tr:hover {
+  background-color: #ddd;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 20px;
+    max-width: 70%;
+  }
+
+  .footer-corner-img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .footer-corner-img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .tabela-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+  }
+
+  .tabela-livros {
+    min-width: 600px;
+  }
+
+  .editar,
+  .excluir {
+    padding: 8px;
+    font-size: 0.85rem;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  table td {
+    word-break: break-word;
+  }
+}
